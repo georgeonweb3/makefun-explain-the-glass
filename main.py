@@ -21,7 +21,11 @@ assert ENTRY.count(".") == 1 and ENTRY.endswith("."), "entry must be one sentenc
 
 
 def main() -> None:
-    out_dir = os.environ.get("OUTPUT_DIR", "/output")
+    # The grader sets MAKEFUN_OUTPUT_DIR=/output; honour it first, then the
+    # generic OUTPUT_DIR override used for local runs, then /output.
+    out_dir = os.environ.get(
+        "MAKEFUN_OUTPUT_DIR", os.environ.get("OUTPUT_DIR", "/output")
+    )
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
     with open(path, "w", encoding="utf-8") as f:
