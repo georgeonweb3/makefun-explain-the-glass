@@ -1,0 +1,11 @@
+Build the make.fun entry for "Five Seconds to Explain the Glass" (u-po-pu-five-seconds-to-explain-the-glass-934d9949).
+
+Write main.py (Python 3.13, repo root) that deterministically writes one sentence
+to /output/entry.txt: the single sentence a house cat would say in its own
+defence in the five seconds after sweeping a glass off the table. The sentence
+must be 1-200 characters, one sentence, in the cat's own voice, no apology and
+no confession, just the most convincing case a cat can make for itself.
+No network, no randomness.
+
+Then add README.md (from the requirements template), LICENSE (MIT), .gitignore,
+verify the entry locally, and commit.
